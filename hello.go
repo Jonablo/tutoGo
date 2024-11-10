@@ -6,11 +6,11 @@ import (
 )
 
 func helloWorldPage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hello World")
+	fmt.Fprint(w, "Hello World [Go!]")
 }
 
 func main() {
 	http.HandleFunc("/", helloWorldPage)
-	http.ListenAndServe("", nil)
+	http.ListenAndServe(":8080", nil)
 
 }
